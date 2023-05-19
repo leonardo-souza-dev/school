@@ -14,6 +14,8 @@
   <ItemGroup>
     <ProjectReference Include="..\School.Domain\School.Domain.csproj" />
     <ProjectReference Include="..\School.Infra\School.Infra.csproj" />
+    <ProjectReference Include="..\School.Application\School.Application.csproj" />
+    <ProjectReference Include="..\School.Infra.CrossCutting\School.Infra.CrossCutting.csproj" />
   </ItemGroup>
 
 </Project>

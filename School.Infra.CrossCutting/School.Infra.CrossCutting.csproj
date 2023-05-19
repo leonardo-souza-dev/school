@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NLog" Version="5.1.0" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="5.2.0" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.2.0" />
+  </ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\School.Application\School.Application.csproj" />
+	  <ProjectReference Include="..\School.Domain\School.Domain.csproj" />
+	  <ProjectReference Include="..\School.Infra\School.Infra.csproj" />
+	</ItemGroup>
+</Project>

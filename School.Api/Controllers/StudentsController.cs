@@ -8,17 +8,17 @@ namespace School.Api.Controllers;
 [Route("[controller]")]
 public class StudentsController : ControllerBase
 {
-    private readonly IStudentRepository _studentRepository;
+    private readonly IStudentServices _studentServices;
 
-    public StudentsController(IStudentRepository studentRepository)
+    public StudentsController(IStudentServices studentServices)
     {
-        _studentRepository = studentRepository;
+        _studentServices = studentServices;
     }
 
     [HttpGet("{id}")]
     public IActionResult Get(int id)
     {
-        var student = _studentRepository.Get(id);
+        var student = _studentServices.Get(id);
 
         return student != null ? Ok(student) : NotFound();
     }
@@ -26,7 +26,7 @@ public class StudentsController : ControllerBase
     [HttpGet]
     public IActionResult GetAll()
     { 
-        var students = _studentRepository.GetAll();
+        var students = _studentServices.GetAll();
 
         return students.Any() ? Ok(students) : NotFound();
     }
@@ -34,7 +34,7 @@ public class StudentsController : ControllerBase
     [HttpPost]
     public IActionResult Save(Student student)
     {
-        _studentRepository.Save(student);
+        _studentServices.Save(student);
 
         return Ok();
     }

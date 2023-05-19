@@ -1,5 +1,4 @@
-using School.Domain.Repositories;
-using School.Infra;
+using School.Infra.CrossCutting;
 
 namespace School.Api;
 
@@ -12,7 +11,7 @@ public class Program
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
-        builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+        builder.Services.RegisterServices();
 
         var app = builder.Build();
 
