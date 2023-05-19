@@ -1,6 +1,7 @@
-﻿﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using School.Application;
 using School.Domain.Repositories;
+using School.Infra.Repositories;
 
 namespace School.Infra.CrossCutting;
 

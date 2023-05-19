@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
@@ -15,6 +15,6 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\School.Application\School.Application.csproj" />
 	  <ProjectReference Include="..\School.Domain\School.Domain.csproj" />
-	  <ProjectReference Include="..\School.Infra\School.Infra.csproj" />
+	  <ProjectReference Include="..\School.Infra.Repositories\School.Infra.Repositories.csproj" />
 	</ItemGroup>
 </Project>

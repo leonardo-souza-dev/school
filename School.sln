@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School.Api", "School.Api\School.Api.csproj", "{C4D03468-4F7D-4BC7-B04C-F2B244B4A8BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "School.Api", "School.Api\School.Api.csproj", "{C4D03468-4F7D-4BC7-B04C-F2B244B4A8BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School.Infra", "School.Infra\School.Infra.csproj", "{5876F657-FE2B-4586-8C6D-18B65CE3EFCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "School.Infra.Repositories", "School.Infra.Repositories\School.Infra.Repositories.csproj", "{5876F657-FE2B-4586-8C6D-18B65CE3EFCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School.Domain", "School.Domain\School.Domain.csproj", "{7BF4EDC2-70E3-48FE-B5AF-CF1E87464B5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "School.Domain", "School.Domain\School.Domain.csproj", "{7BF4EDC2-70E3-48FE-B5AF-CF1E87464B5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School.Application", "School.Application\School.Application.csproj", "{F3CFC851-5C62-4208-B138-125E772EDEC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "School.Application", "School.Application\School.Application.csproj", "{F3CFC851-5C62-4208-B138-125E772EDEC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School.Infra.CrossCutting", "School.Infra.CrossCutting\School.Infra.CrossCutting.csproj", "{48F0F15F-FC3E-477F-BA62-5A986585ECE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "School.Infra.CrossCutting", "School.Infra.CrossCutting\School.Infra.CrossCutting.csproj", "{48F0F15F-FC3E-477F-BA62-5A986585ECE4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

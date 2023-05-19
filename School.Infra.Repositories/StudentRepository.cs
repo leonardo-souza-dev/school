@@ -4,21 +4,21 @@ using School.Domain.Entities;
 using School.Domain.Repositories;
 using Microsoft.Extensions.Configuration;
 
-namespace School.Infra;
+namespace School.Infra.Repositories;
 
 public class StudentRepository : IStudentRepository
 {
-    private readonly string CONN_STRING;
+    private readonly string? _connectionString;
 
     public StudentRepository(IConfiguration configuration)
     {
-        CONN_STRING = configuration.GetConnectionString("School");
+        _connectionString = configuration.GetConnectionString("School");
     }
 
     public Student Get(int id)
     {
-        Student student = null;
-        using (var connection = new SqlConnection(CONN_STRING))
+        Student? student = null;
+        using (var connection = new SqlConnection(_connectionString))
         {
             connection.Open();
             student = connection.QueryFirstOrDefault<Student>(
@@ -32,8 +32,8 @@ public class StudentRepository : IStudentRepository
 
     public IEnumerable<Student> GetAll()
     {
-        IEnumerable<Student> students = null;
-        using (var connection = new SqlConnection(CONN_STRING))
+        IEnumerable<Student>? students = null;
+        using (var connection = new SqlConnection(_connectionString))
         {
             connection.Open();
             students = connection.Query<Student>("SELECT * FROM Student ");
@@ -44,7 +44,7 @@ public class StudentRepository : IStudentRepository
 
     public void Save(Student student)
     {
-        using var connection = new SqlConnection(CONN_STRING);
+        using var connection = new SqlConnection(_connectionString);
         connection.Open();
         connection.Execute("INSERT INTO Student VALUES (@name)", new { name = student.Name });
     }
